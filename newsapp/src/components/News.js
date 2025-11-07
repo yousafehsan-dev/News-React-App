@@ -60,11 +60,11 @@ export class News extends Component {
   render() {
     return (
       <div className ="container my-3">
-        <h2> NewsMonkey - Top Headlines</h2>
+        <h1 className='text-center'> NewsMonkey - Top Headlines</h1>
         <div className="row">
         {this.state.articles.map((element)=>{
           return  <div className="col-md-3" key={element.url}>
-        <Newsitem  tittle={element.title.slice(0, 45)} description={element.description.slice(0,50)} imgurl ={element.urlToImage} newsurl={element.url}/>
+        <Newsitem  tittle={element.title.slice(0, 45)} description={element.description} imgurl ={element.urlToImage} newsurl={element.url}/>
             </div>
         })}
            </div>
